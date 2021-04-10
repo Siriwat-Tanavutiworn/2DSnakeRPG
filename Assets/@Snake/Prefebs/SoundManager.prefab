@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8747265281004225827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8747265281004225828}
+  - component: {fileID: 1697512660}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8747265281004225828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8747265281004225827}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1697512660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8747265281004225827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96192caae8a89e44a72cbc03bfb8ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Play_Now:
+  - {fileID: 8300000, guid: 2fb8d1b0809a99441aeff9568931789b, type: 3}
+  Sounds:
+  - Name: map
+    Clip: {fileID: 8300000, guid: 2fb8d1b0809a99441aeff9568931789b, type: 3}
+    Type: 2
+  - Name: fighting
+    Clip: {fileID: 8300000, guid: 1a05f92e132997c4b89b53a5cc5f8d9d, type: 3}
+    Type: 2
+  - Name: ok
+    Clip: {fileID: 8300000, guid: b486482a9237b3b46b93d9527fdff7f6, type: 3}
+    Type: 0
