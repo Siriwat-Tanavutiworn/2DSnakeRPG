@@ -80,14 +80,14 @@ MonoBehaviour:
   - {fileID: 1422868134, guid: 569ef524d71864440bea0d50d55854d8, type: 3}
   - {fileID: 1422868134, guid: 434b2ec0b150c4a4aab8406a2fec5623, type: 3}
   - {fileID: 1422868134, guid: 7c85b73b0fa70134d9e4f769a1c62269, type: 3}
-  maxFollowerTimer: 8
+  maxFollowerTimer: 7
   currentFollowerTimer: 0
   enemyGroup: {fileID: 4987216935532023960}
   allEnemySpawn:
   - {fileID: 7533538036805832577, guid: d19b0e5f51ac4c448af9d6002610e3a8, type: 3}
   - {fileID: 7533538036805832577, guid: f07c5eb6f071c9245b61e0a23d468747, type: 3}
   - {fileID: 7533538036805832577, guid: a9847a85fb84ea049ae31a6ac6b0baa7, type: 3}
-  maxEnemyTimer: 7
+  maxEnemyTimer: 6
   currentEnemyTimer: 0
   maxEnemyInLine: 5
 --- !u!1 &4987216935859096549

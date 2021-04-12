@@ -152,6 +152,7 @@ MonoBehaviour:
   startPoint: {x: 0, y: 0, z: 0}
   endPoint: {x: 0, y: 0, z: 0}
   _startMoveSpeed: 4
+  _moveSpeed: 0
   body: {fileID: 1693214630649372189}
   dir: {x: 0, y: 0, z: 0}
   isPlayer: 1

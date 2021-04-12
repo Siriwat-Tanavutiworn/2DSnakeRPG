@@ -453,6 +453,8 @@ public class PlayerController : StateLookUp
 
     public void DestroyAvatarByWall()
     {
+        EffectHandle.current.PlaySelectEffect("death", transform.position);
+
         if(allLineUnit.Count < 2)
         {
             Destroy(gameObject);

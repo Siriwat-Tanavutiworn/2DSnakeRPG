@@ -55,12 +55,12 @@ public class Fighting : StateLookUp
 
         gameStates[GameState.Fight] = () =>
         {
-            endScoreText.text = controller.scoreText.text;
+            
         };
 
         gameStates[GameState.End] = () =>
         {
-            endScoreText.text = controller.scoreText.text;
+            
         };
     }
 
@@ -291,6 +291,7 @@ public class Fighting : StateLookUp
                 yield return null;
                 state = GameState.End;
                 LoseCanvas.SetActive(true);
+                endScoreText.text = "Your Score : " + controller.score;
                 isActive = false;
             }
         }

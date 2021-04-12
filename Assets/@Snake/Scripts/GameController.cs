@@ -9,11 +9,13 @@ public class GameController : StateLookUp
     public Vector2 yBorder;
 
     public Fighting fightingSystem;
-
-    [SerializeField] GameObject LoseBox;
     [SerializeField] GameObject startText;
     [SerializeField] GameObject pauseBox;
     public bool isPause = false;
+
+    [Header("Lose Canvas")]
+    [SerializeField] GameObject LoseBox;
+    [SerializeField] Text finalScore;
 
     [Header("Score")]
     public Text scoreText;
@@ -70,6 +72,7 @@ public class GameController : StateLookUp
     void EnableLoseBox()
     {
         LoseBox.SetActive(true);
+        finalScore.text = "Your Score : " + score;
     }
 
     public void Restart()
