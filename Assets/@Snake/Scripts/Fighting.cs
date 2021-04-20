@@ -104,18 +104,21 @@ public class Fighting : StateLookUp
     {
         GameObject playerTemp = Instantiate(ply.allLineUnit[index].gameObject, playerPredestal.transform.position, Quaternion.identity);
 
+        var playerController = playerTemp.GetComponent<PlayerController>();
+        var playrSortingGroup = playerController.body.GetComponent<SortingGroup>();
+
         playerTemp.GetComponent<Animator>().Play("PIdleFight");
 
-        playerTemp.GetComponent<PlayerController>().body.transform.localScale = Vector3.one;
+        playerController.body.transform.localScale = Vector3.one;
         //playerTemp.GetComponentInChildren<SortingGroup>().sortingLayerName = "UI";
         //playerTemp.GetComponentInChildren<SortingGroup>().sortingOrder = 2;
 
-        playerTemp.GetComponent<PlayerController>().body.GetComponent<SortingGroup>().sortingLayerName = "UI";
-        playerTemp.GetComponent<PlayerController>().body.GetComponent<SortingGroup>().sortingOrder = 2;
+        playrSortingGroup.sortingLayerName = "UI";
+        playrSortingGroup.sortingOrder = 2;
 
-        playerTemp.GetComponent<PlayerController>()._HP = ply.allLineUnit[index]._HP;
+        playerController._HP = ply.allLineUnit[index]._HP;
 
-        currentFightPlayer = playerTemp.GetComponent<PlayerController>();
+        currentFightPlayer = playerController;
         playerHealth.fillAmount = currentFightPlayer._HP / currentFightPlayer.unitData._HP;
         playerHealthText.text = currentFightPlayer._HP + "/" + currentFightPlayer.unitData._HP;
     }
@@ -124,12 +127,14 @@ public class Fighting : StateLookUp
     {
         GameObject enemyTemp = Instantiate(enemy.allLineUnit[index].gameObject, enemyPredestal.transform.position, Quaternion.identity);
 
+        var enemySortingGroup = enemyTemp.GetComponentInChildren<SortingGroup>();
+
         enemyTemp.GetComponent<Animator>().Play("EIdleAttack");
 
         enemyTemp.GetComponent<EnemyController>().body.transform.localScale = Vector3.one;
 
-        enemyTemp.GetComponentInChildren<SortingGroup>().sortingLayerName = "UI";
-        enemyTemp.GetComponentInChildren<SortingGroup>().sortingOrder = 2;
+        enemySortingGroup.sortingLayerName = "UI";
+        enemySortingGroup.sortingOrder = 2;
         currentFightEnemy = enemyTemp.GetComponent<EnemyController>();
         enemyHealth.fillAmount = currentFightEnemy._HP / currentFightEnemy.unitData._HP;
         enemyHealthText.text = currentFightEnemy._HP + "/" + currentFightEnemy.unitData._HP;
